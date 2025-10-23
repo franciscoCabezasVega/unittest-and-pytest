@@ -15,3 +15,7 @@ def divide(a, b):
     if b == 0:
         raise ValueError("Cannot divide by zero.")
     return a / b
+
+def power(base, exponent):
+    """Return base raised to the power of exponent."""
+    return base ** exponent

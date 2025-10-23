@@ -1,5 +1,5 @@
 import pytest
-from src.calculator import add, subtract, multiply, divide
+from src.calculator import add, subtract, multiply, divide, power
 
 @pytest.mark.parametrize("a,b,expected", [
     (2, 3, 5),
@@ -27,3 +27,11 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ValueError):
         divide(10, 0)
+
+@pytest.mark.parametrize("base,exponent,expected", [
+    (2, 3, 8),
+    (5, 0, 1),
+    (9, 0.5, 3),
+])
+def test_power(base, exponent, expected):
+    assert power(base, exponent) == expected
