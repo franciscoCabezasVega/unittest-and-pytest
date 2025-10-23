@@ -14,7 +14,7 @@ Example: Add a new unit test for the `multiply()` function in the `calculator.py
 
 ### 🧰 How to test
 <!-- Step-by-step instructions for testing the changes -->
-1. Run `pytest --cov=src` or `python -m unittest discover`
+1. Run `python -m pytest --cov=src` or `python -m unittest discover`
 2. Verify that all tests pass correctly
 3. Confirm updated coverage in the report (`coverage.xml` or Codecov)
 
