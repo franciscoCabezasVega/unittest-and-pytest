@@ -1,4 +1,4 @@
-name: 🧪 Run Python Tests
+name: 🧪 Run Python Tests with Coverage
 
 on:
   push:
@@ -24,12 +24,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: ✅ Run tests with unittest
+      - name: ✅ Run unittest tests
         run: |
-          echo "Running unittest tests..."
           python -m unittest discover -s tests
 
-      - name: 🧪 Run tests with pytest
+      - name: 🧪 Run pytest with coverage
         run: |
-          echo "Running pytest tests..."
-          pytest --maxfail=1 --disable-warnings -v
+          pytest --cov=src --cov-report=xml --cov-report=term
+
+      - name: ☁️ Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          files: ./coverage.xml
+          flags: unittests
+          name: codecov-coverage
+          fail_ci_if_error: true
+          token: ${{ secrets.CODECOV_TOKEN }}
