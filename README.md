@@ -1,8 +1,8 @@
 # 🧩 Testing Template (Python)
 
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
-![Tests](https://github.com/franciscoCabezasVega/testing-template-py/actions/workflows/tests.yml/badge.svg)
-[![codecov](https://codecov.io/gh/franciscoCabezasVega/testing-template-py/branch/main/graph/badge.svg)](https://codecov.io/gh/franciscoCabezasVega/testing-template-py)
+![Tests](https://github.com/franciscoCabezasVega/unittest-y-pytest/actions/workflows/tests.yml/badge.svg)
+[![codecov](https://codecov.io/github/franciscoCabezasVega/unittest-y-pytest/graph/badge.svg?token=JXR7YLKSWR)](https://codecov.io/github/franciscoCabezasVega/unittest-y-pytest)
 
 This base project will serve as a professional template for testing in Python with unittest and pytest.
 
